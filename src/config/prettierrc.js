@@ -1,5 +1,5 @@
 module.exports = {
-  arrowParens: 'avoid',
+  arrowParens: 'always',
   bracketSpacing: false,
   embeddedLanguageFormatting: 'auto',
   endOfLine: 'lf',
@@ -11,9 +11,9 @@ module.exports = {
   proseWrap: 'always',
   quoteProps: 'as-needed',
   requirePragma: false,
-  semi: false,
+  semi: true,
   singleQuote: true,
   tabWidth: 2,
   trailingComma: 'all',
   useTabs: false,
-}
+};

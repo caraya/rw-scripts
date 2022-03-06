@@ -16,7 +16,7 @@ series [How to Contribute to an Open Source Project on GitHub][egghead]
 > pull requests from branches on your fork. To do this, run:
 >
 > ```
-> git remote add upstream https://github.com/kentcdodds/kcd-scripts
+> git remote add upstream https://github.com/kentcdodds/rw-scripts
 > git fetch upstream
 > git branch --set-upstream-to=upstream/master master
 > ```
@@ -42,5 +42,5 @@ requests! Thanks!
 
 <!-- prettier-ignore-start -->
 [egghead]: https://egghead.io/series/how-to-contribute-to-an-open-source-project-on-github
-[issues]: https://github.com/kentcdodds/kcd-scripts/issues
+[issues]: https://github.com/kentcdodds/rw-scripts/issues
 <!-- prettier-ignore-end -->

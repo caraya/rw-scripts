@@ -1,36 +1,37 @@
-const path = require('path')
-const spawn = require('cross-spawn')
-const {hasPkgProp, hasFile, resolveBin} = require('../utils')
+/* eslint-disable require-jsdoc */
+const path = require('path');
+const spawn = require('cross-spawn');
+const {hasPkgProp, hasFile, resolveBin} = require('../utils');
 
-const here = p => path.join(__dirname, p)
-const hereRelative = p => here(p).replace(process.cwd(), '.')
+const here = (p) => path.join(__dirname, p);
+const hereRelative = (p) => here(p).replace(process.cwd(), '.');
 
-const args = process.argv.slice(2)
+const args = process.argv.slice(2);
 
 const useBuiltInConfig =
   !args.includes('--config') &&
   !hasFile('.lintstagedrc') &&
   !hasFile('lint-staged.config.js') &&
-  !hasPkgProp('lint-staged')
+  !hasPkgProp('lint-staged');
 
-const config = useBuiltInConfig
-  ? ['--config', hereRelative('../config/lintstagedrc.js')]
-  : []
+const config = useBuiltInConfig ?
+  ['--config', hereRelative('../config/lintstagedrc.js')] :
+  [];
 
 function go() {
-  let result
+  let result;
 
   result = spawn.sync(resolveBin('lint-staged'), [...config, ...args], {
     stdio: 'inherit',
-  })
+  });
 
-  if (result.status !== 0) return result.status
+  if (result.status !== 0) return result.status;
 
   result = spawn.sync('npm', ['run', 'validate'], {
     stdio: 'inherit',
-  })
+  });
 
-  return result.status
+  return result.status;
 }
 
-process.exit(go())
+process.exit(go());

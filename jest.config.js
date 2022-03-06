@@ -1,6 +1,6 @@
-const {jest} = require('./src/config')
+const {jest} = require('./src/config');
 
 module.exports = {
   ...jest,
   coverageThreshold: null,
-}
+};

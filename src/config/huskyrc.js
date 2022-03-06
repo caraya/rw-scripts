@@ -1,9 +1,9 @@
-const {resolveKcdScripts} = require('../utils')
+const {resolveRwScripts} = require('../utils');
 
-const kcdScripts = resolveKcdScripts()
+const RwScripts = resolveRwScripts();
 
 module.exports = {
   hooks: {
-    'pre-commit': `"${kcdScripts}" pre-commit`,
+    'pre-commit': `"${RwScripts}" pre-commit`,
   },
-}
+};

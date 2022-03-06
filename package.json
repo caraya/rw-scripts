@@ -1,5 +1,5 @@
 {
-  "name": "kcd-scripts",
+  "name": "rw-scripts",
   "version": "0.0.0-semantically-released",
   "description": "CLI for common scripts for my projects",
   "engines": {
@@ -7,7 +7,7 @@
     "npm": ">=6"
   },
   "bin": {
-    "kcd-scripts": "dist/index.js"
+    "rw-scripts": "dist/index.js"
   },
   "scripts": {
     "test": "node src test",
@@ -33,6 +33,7 @@
   "dependencies": {
     "@babel/cli": "^7.16.7",
     "@babel/core": "^7.16.7",
+    "@babel/eslint-parser": "^7.17.0",
     "@babel/plugin-proposal-class-properties": "^7.16.7",
     "@babel/plugin-transform-modules-commonjs": "^7.16.7",
     "@babel/plugin-transform-runtime": "^7.16.7",
@@ -63,6 +64,7 @@
     "cross-spawn": "^7.0.3",
     "doctoc": "^2.1.0",
     "eslint": "^8.6.0",
+    "eslint-config-google": "^0.14.0",
     "eslint-config-kentcdodds": "^20.0.0",
     "glob": "^7.2.0",
     "husky": "^4.3.8",
@@ -93,20 +95,20 @@
     "slash": "^3.0.0"
   },
   "eslintConfig": {
+    "env": {
+      "browser": true,
+      "es2017": true,
+      "node": true
+    },
+    "parserOptions": {
+      "ecmaVersion": 2017,
+      "requireConfigFile": false
+    },
+    "parser": "@babel/eslint-parser",
     "extends": [
-      "kentcdodds",
-      "kentcdodds/jest"
+      "google"
     ],
-    "rules": {
-      "no-process-exit": "off",
-      "import/no-dynamic-require": "off",
-      "import/no-import-module-exports": "off",
-      "import/no-unassigned-import": "off",
-      "import/extensions": "off",
-      "no-console": "off",
-      "no-nested-ternary": "off",
-      "no-useless-catch": "off"
-    }
+    "rules": {}
   },
   "eslintIgnore": [
     "node_modules",
@@ -115,10 +117,10 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/kentcdodds/kcd-scripts"
+    "url": "https://github.com/caraya/rw-scripts"
   },
   "bugs": {
-    "url": "https://github.com/kentcdodds/kcd-scripts/issues"
+    "url": "https://github.com/caraya/rw-scripts/issues"
   },
-  "homepage": "https://github.com/kentcdodds/kcd-scripts#readme"
+  "homepage": "https://github.com/caraya/rw-scripts#readme"
 }
