@@ -10,3 +10,7 @@ This is a fork of [kcd-scripts](https://github.com/kentcdodds/kcd-scripts#readme
   * `markdownlint` to lint Markdown files before uploading them
   * `@wordpress/env`, a tool to facilitate testing and development of WordPress plugins and themes
   * `@wordpress/create-block` to automate the creation of WordPress block plugins
+
+## LICENSE
+
+MIT
