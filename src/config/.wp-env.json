@@ -1,0 +1,8 @@
+{
+  "wp_debug": true,
+  "script_debug": true,
+  "phpVersion": "8.0",
+  "core": "WordPress/WordPress#master",
+  "themes": [ "WordPress/theme-experiments"],
+  "plugins": [ "."]
+}
