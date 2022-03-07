@@ -65,7 +65,9 @@
     "doctoc": "^2.1.0",
     "eslint": "^8.6.0",
     "eslint-config-google": "^0.14.0",
-    "eslint-config-kentcdodds": "^20.0.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-jsx-a11y": "^6.5.1",
+    "eslint-plugin-react": "^7.29.3",
     "glob": "^7.2.0",
     "husky": "^4.3.8",
     "is-ci": "^3.0.1",
@@ -77,13 +79,15 @@
     "lodash.camelcase": "^4.3.0",
     "lodash.has": "^4.5.2",
     "lodash.omit": "^4.5.0",
+    "markdownlint": "^0.25.1",
+    "markdownlint-cli": "^0.31.1",
     "mkdirp": "^1.0.4",
     "prettier": "2.5.1",
     "read-pkg-up": "^7.0.1",
     "resolve": "^1.21.0",
     "rimraf": "^3.0.2",
     "rollup": "^2.63.0",
-    "rollup-plugin-node-builtins": "^2.1.2",
+    "rollup-plugin-node-builtins": "^2.0.0",
     "rollup-plugin-node-globals": "^1.4.0",
     "rollup-plugin-terser": "^7.0.2",
     "semver": "^7.3.5",
@@ -106,9 +110,34 @@
     },
     "parser": "@babel/eslint-parser",
     "extends": [
-      "google"
+      "google",
+      "prettier"
     ],
-    "rules": {}
+    "rules": {
+      "indent": [
+        "error",
+        2,
+        {
+          "CallExpression": {
+            "arguments": 2
+          },
+          "FunctionDeclaration": {
+            "body": 1,
+            "parameters": 2
+          },
+          "FunctionExpression": {
+            "body": 1,
+            "parameters": 2
+          },
+          "MemberExpression": 2,
+          "ObjectExpression": 1,
+          "SwitchCase": 1,
+          "ignoredNodes": [
+            "ConditionalExpression"
+          ]
+        }
+      ]
+    }
   },
   "eslintIgnore": [
     "node_modules",

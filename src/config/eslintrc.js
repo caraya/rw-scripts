@@ -3,9 +3,8 @@ const {ifAnyDep} = require('../utils');
 module.exports = {
   extends: [
     require.resolve('eslint-config-google'),
-    require.resolve('eslint-config-kentcdodds/jest'),
-    ifAnyDep('react', require.resolve('eslint-config-kentcdodds/jsx-a11y')),
-    ifAnyDep('react', require.resolve('eslint-config-kentcdodds/react')),
+    ifAnyDep('react', require.resolve('eslint-plugin-jsx-a11y')),
+    ifAnyDep('react', require.resolve('eslint-plugin-react')),
   ].filter(Boolean),
   rules: {},
 };

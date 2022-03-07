@@ -32,6 +32,7 @@ Available Scripts:
   build
   format
   lint
+  mdlint
   pre-commit
   test
   typecheck
