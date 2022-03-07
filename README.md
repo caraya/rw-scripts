@@ -8,6 +8,7 @@ This is a fork of [kcd-scripts](https://github.com/kentcdodds/kcd-scripts#readme
 * As a result of the change, there is more eslint configuration in `rw-scripts` `package.json` file
 * `rw-scripts` adds the following tools:
   * `markdownlint` to lint Markdown files before uploading them
+* Adds WordPress-specific tools:
   * `@wordpress/env`, a tool to facilitate testing and development of WordPress plugins and themes
   * `@wordpress/create-block` to automate the creation of WordPress block plugins
 
