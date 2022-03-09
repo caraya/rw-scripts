@@ -66,6 +66,7 @@ function spawnScript() {
       'test',
       'validate',
       'typecheck',
+      'markdownlint',
       'wpenv',
     ].includes(x),
   );

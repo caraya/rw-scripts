@@ -81,7 +81,7 @@
     "lodash.has": "^4.5.2",
     "lodash.omit": "^4.5.0",
     "markdownlint": "^0.25.1",
-    "markdownlint-cli": "^0.31.1",
+    "markdownlint-cli2": "^0.4.0",
     "mkdirp": "^1.0.4",
     "prettier": "2.5.1",
     "read-pkg-up": "^7.0.1",
