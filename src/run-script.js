@@ -66,7 +66,6 @@ function spawnScript() {
       'test',
       'validate',
       'typecheck',
-      'mdlint',
       'wpenv',
     ].includes(x),
   );
